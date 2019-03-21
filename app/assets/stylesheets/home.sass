@@ -1,37 +1,77 @@
-.homeWhite
-    background-color: white
-    height: 6rem
+.home
+    height: 100vh
     width: 100vw
 
-.navIconBox
-    cursor: pointer
+.homeBox
     float: left
-    height: 100%
-    width: 8rem
+    height: 100vh
+    overflow-x: hidden
+    width: 50%
 
-.navIconLine
+.homeBox:last-child
     background-color: black
+
+.scroll
+    bottom: 0
+    color: white
+    font-weight: bold
+    height: 5rem
+    letter-spacing: 15px
+    position: absolute
+    text-transform: uppercase
+    width: 50vw
+
+#scrollLineOne
+    border: none
     height: 2px
-    margin: 10px 0px 10px 0px
-    width: 50px
+    margin-right: 4rem
+    position: relative
+    width: 50%
 
-.navIconLine:last-child
-    width: 30px
+#scrollLineTwo
+    background-color: white
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    transition: width 1s
+    width: 0%
 
-.homeImage
-    background: linear-gradient(to right, rgba(241, 250, 255, .8), rgba(241, 250, 255, .85)), image_url('sweden.jpg')
-    background-position-y: 30%
-    background-size: cover
-    height: calc(100vh - 12rem)
+
+
+
+
+// list
+
+
+
+
+
+.list
+    height: 100vh
     width: 100vw
 
-.homeText
-    text-align: center
+.listItem
+    background-color: green
+    cursor: pointer
+    font-size: 30px
+    font-weight: bold
+    height: 25vh
+    letter-spacing: 10px
     text-transform: uppercase
+    transition: width .75s
+    white-space: nowrap
+    width: 0vw
 
-.homeText h1
-    font-size: 20px
-    letter-spacing: 20px
+#item1
+    background-color: #fff7f8
 
-.homeText hr
-    width: 50px
+#item2
+    background-color: whitesmoke
+
+#item3
+    background-color: black
+    color: white
+
+#item4
+    background-color: #f6fbfc
