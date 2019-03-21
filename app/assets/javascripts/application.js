@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX
 
 document.addEventListener('DOMContentLoaded', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     item2 = document.querySelector('#item2')
     item3 = document.querySelector('#item3')
     item4 = document.querySelector('#item4')
+    item5 = document.querySelector('#item5')
+    musicModal = document.querySelector('#musicModal')
+    musicModalX = document.querySelector('#musicModalX')
+    song = document.querySelector('#song')
+
+    musicModal.style.display = 'none'
 
     setTimeout(function() {
         scrollLine.style.left = '0'
@@ -41,6 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(function() {
         scrollingAnimation(scrollLine)
     }, 3000)
+
+    // go to top of home page
+
+    item1.addEventListener('click', () => {
+        window.scrollTo(0, 0)
+    })
+
+    // open music modal
+
+    item5.addEventListener('click', () => {
+        musicModal.style.display = 'flex'
+        musicModal.style.top = window.pageYOffset + 'px'
+        song.innerHTML = songs[Math.floor(Math.random() * songs.length)]
+    })
+
+    musicModalX.addEventListener('click', () => {
+        musicModal.style.display = 'none'
+    })
 })
 
 // animation for scrolling line
@@ -64,28 +88,38 @@ const scrollingAnimation = () => {
 document.addEventListener('scroll', () => {
     let offset = window.pageYOffset
 
+    musicModal.style.top = window.pageYOffset + 'px'
+
+    // for navigation animations
+
     if (offset >= 200) {
         item1.style.width = '100vw'
     } else {
         item1.style.width = '0vw'
     }
 
-    if (offset >= 350) {
+    if (offset >= 300) {
         item2.style.width = '100vw'
     } else {
         item2.style.width = '0vw'
     }
 
-    if (offset >= 500) {
+    if (offset >= 400) {
         item3.style.width = '100vw'
     } else {
         item3.style.width = '0vw'
     }
 
-    if (offset >= 650) {
+    if (offset >= 500) {
         item4.style.width = '100vw'
     } else {
         item4.style.width = '0vw'
+    }
+
+    if (offset >= 600) {
+        item5.style.width = '100vw'
+    } else {
+        item5.style.width = '0vw'
     }
 })
 
