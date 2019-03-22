@@ -1,8 +1,11 @@
-.adminIndex
-    - @messages.each do |message|
+- if admin_signed_in?
+    .adminIndex
+        - @messages.each do |message|
 
-        .message
-            %p.messageName= "Message from: #{message.name}"
-            %p.messageEmail= "#{message.name}'s email: #{message.email}"
-            %p.messageTitle= message.title
-            %p.messageContent= message.content
+            .message
+                %p.messageName= "Message from: #{message.name}"
+                %p.messageEmail= "#{message.name}'s email: #{message.email}"
+                %p.messageTitle= message.title
+                %p.messageContent= message.content
+- else
+    %p Sorry, you do not have access to this page.
