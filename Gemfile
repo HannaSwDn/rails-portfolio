@@ -24,6 +24,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'launchy'
 end
 
 group :development do

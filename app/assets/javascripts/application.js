@@ -18,7 +18,7 @@
 // global variables
 let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
     nameAnimation = document.querySelector('#nameAnimation')
     item1 = document.querySelector('#item1')
@@ -67,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
+// hide music modal
+
+const hideMusicModal = () => {
+    setTimeout(function() {
+        musicModal.style.display = 'none'
+    }, 20)
+}
+
 // animation for scrolling line
 
 const scrollingAnimation = () => {
@@ -88,7 +96,7 @@ const scrollingAnimation = () => {
 document.addEventListener('scroll', () => {
     let offset = window.pageYOffset
 
-    musicModal.style.top = window.pageYOffset + 'px'
+    musicModal.style.top = offset + 'px'
 
     // for navigation animations
 

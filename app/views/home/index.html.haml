@@ -18,7 +18,7 @@
   #item3.listItem
     %p works
   #item4.listItem
-    %p contact
+    = link_to 'contact', new_message_path, id: 'contactLink'
   #item5.listItem
     %hr/
     %p music
@@ -31,3 +31,4 @@
       %p music tips:
       %hr/
       %p#song song will come up here yes
+
