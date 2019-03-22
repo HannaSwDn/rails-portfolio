@@ -14,6 +14,10 @@ Given("I send away the message") do
     find('.send').click
 end
 
+Given('I click on link {string}') do |string|
+    click_on string
+end
+
 Given("show me the page") do
     save_and_open_page
 end
