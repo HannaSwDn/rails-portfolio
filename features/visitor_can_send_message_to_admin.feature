@@ -12,5 +12,5 @@ Feature: Visitor can send message to admin
         And I fill in 'Title' field with 'This is a title'
         And I fill in 'Content' field with 'This is some content'
         And I send away the message
-        Then I should see 'Thankyou for your message!'
+        Then I should see 'Thank you for your message!'
         And I should see 'I will get back to you as soon as possible.'

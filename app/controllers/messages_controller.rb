@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
         if @message.save
             redirect_to messages_path
         else
-            render :new, notice: "Sorry."
+            redirect_to new_message_path, notice: "Sorry, your message could not be sent."
         end
     end
 

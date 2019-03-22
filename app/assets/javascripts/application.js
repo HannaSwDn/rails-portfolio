@@ -18,7 +18,7 @@
 // global variables
 let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
     nameAnimation = document.querySelector('#nameAnimation')
     item1 = document.querySelector('#item1')
