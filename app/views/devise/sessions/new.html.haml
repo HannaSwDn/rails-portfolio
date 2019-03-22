@@ -1,16 +1,18 @@
-%h2 Log in
+.login
+  %div
+    %h2 Welcome, Hanna!
 
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :email, class: 'loginLabel'
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: 'loginField'
 
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
+      .field
+        = f.label :password, class: 'loginLabel'
+        %br/
+        = f.password_field :password, autocomplete: "current-password", class: 'loginField'
 
-  .actions
-    = f.submit "Log in", id: 'login'
+      .actions
+        = f.submit "Log in", id: 'login'
