@@ -21,3 +21,10 @@ end
 Given("show me the page") do
     save_and_open_page
 end
+
+Given("I am logged in as Admin") do
+    visit new_admin_session_path
+    fill_in 'Email', with: 'admin@mail.com'
+    fill_in 'Password', with: 'password'
+    find('#login').click
+end

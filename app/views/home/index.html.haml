@@ -2,6 +2,7 @@
   .homeBox
     - if admin_signed_in?
       = link_to 'Sign out', destroy_admin_session_path, method: :delete
+      = link_to 'Messages', admin_index_path
     - else
       = link_to 'Hanna', new_admin_session_path
   .homeBox

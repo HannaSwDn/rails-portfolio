@@ -1,0 +1,8 @@
+.adminIndex
+    - @messages.each do |message|
+
+        .message
+            %p.messageName= "Message from: #{message.name}"
+            %p.messageEmail= "#{message.name}'s email: #{message.email}"
+            %p.messageTitle= message.title
+            %p.messageContent= message.content

@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root controller: :home, action: :index
   resources :messages
   get "message/new" => "messages#new"
+  resources :admin
 end
