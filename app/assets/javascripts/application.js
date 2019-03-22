@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, worksModal
 
 document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -29,6 +29,7 @@ document.addEventListener('turbolinks:load', () => {
     musicModal = document.querySelector('#musicModal')
     musicModalX = document.querySelector('#musicModalX')
     song = document.querySelector('#song')
+    worksModal = document.querySelector('#worksModal')
 
     musicModal.style.display = 'none'
 
@@ -46,7 +47,7 @@ document.addEventListener('turbolinks:load', () => {
 
     setInterval(function() {
         scrollingAnimation(scrollLine)
-    }, 3000)
+    }, 5000)
 
     // go to top of home page
 
@@ -91,12 +92,11 @@ const scrollingAnimation = () => {
     }, 1010)
 }
 
-// animation for works div
-
 document.addEventListener('scroll', () => {
     let offset = window.pageYOffset
 
     musicModal.style.top = offset + 'px'
+    worksModal.style.top = offset + 'px'
 
     // for navigation animations
 
@@ -130,6 +130,12 @@ document.addEventListener('scroll', () => {
         item5.style.width = '0vw'
     }
 })
+
+// open works modal
+
+const openWorksModal = () => {
+    worksModal.style.display = 'block'
+}
 
 // songs
 

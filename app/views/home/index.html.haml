@@ -4,7 +4,8 @@
       = link_to 'Sign out', destroy_admin_session_path, method: :delete
       = link_to 'Messages', admin_index_path
     - else
-      = link_to 'Hanna', new_admin_session_path
+      = link_to 'welcome.', new_admin_session_path, id: 'hanna'
+
   .homeBox
     .scroll
       #scrollLineOne
@@ -17,7 +18,7 @@
   #item2.listItem
     %p about me
   #item3.listItem
-    %p works
+    %p{onclick: 'openWorksModal()'} works
   #item4.listItem
     = link_to 'contact', new_message_path, id: 'contactLink'
   #item5.listItem
@@ -33,3 +34,16 @@
       %hr/
       %p#song song will come up here
 
+  / works modal
+
+  #worksModal
+    .work
+      = image_tag('valencia.png', class: 'workImg')
+      .workInfo
+        %p Valencia
+        %p Features:
+        %ul
+          %li - You can log in as an Admin
+          %li - You can add items to the menu
+          %li - You can edit items on the menu
+          %li - You can delete items on the menu
