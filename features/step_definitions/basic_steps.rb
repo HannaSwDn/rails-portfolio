@@ -1,9 +1,9 @@
 Given("I visit the site") do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit root_path
 end
 
 Given("I click on {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    find("#{string}").click
 end
 
 Given("I fill in the contact form") do

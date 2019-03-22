@@ -6,7 +6,7 @@ Feature: Visitor can send message to admin
 
     Scenario: Visitor can successfully send a message
         Given I visit the site
-        And I click on 'Contact'
+        And I click on 'contact'
         And I fill in the contact form
         And I click on 'Send message'
         Then I should see 'Your message has been sent!'
