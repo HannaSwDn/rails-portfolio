@@ -6,8 +6,12 @@ Given("I click on {string}") do |string|
     find(".#{string}").click
 end
 
-Given("I fill in the contact form") do
-    pending # Write code here that turns the phrase above into concrete actions
+Given("I fill in {string} field with {string}") do |field, content|
+    fill_in field, with: content
+end
+
+Given("I send away the message") do
+    find('.send').click
 end
 
 Given("show me the page") do

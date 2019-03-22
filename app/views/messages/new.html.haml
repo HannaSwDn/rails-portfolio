@@ -1,0 +1,23 @@
+#contactForm
+    %h2 Say Hello!
+
+    = form_with model: @message do |form|
+
+        %p
+            = form.label :name
+            = form.text_field :name
+
+        %p
+            = form.label :email
+            = form.text_field :email
+
+        %p
+            = form.label :title
+            = form.text_field :title
+
+        %p
+            = form.label :content
+            = form.text_area :content
+
+        %p
+            = form.submit 'Send Message', class: 'send'

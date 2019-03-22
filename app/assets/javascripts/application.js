@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, contactForm
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX
 
 document.addEventListener('DOMContentLoaded', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     musicModal = document.querySelector('#musicModal')
     musicModalX = document.querySelector('#musicModalX')
     song = document.querySelector('#song')
-    contactForm = document.querySelector('#contactForm')
 
     musicModal.style.display = 'none'
 
@@ -68,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
+// hide music modal
+
+const hideMusicModal = () => {
+    setTimeout(function() {
+        musicModal.style.display = 'none'
+    }, 20)
+}
+
 // animation for scrolling line
 
 const scrollingAnimation = () => {
@@ -90,7 +97,6 @@ document.addEventListener('scroll', () => {
     let offset = window.pageYOffset
 
     musicModal.style.top = offset + 'px'
-    contactForm.style.top = offset + 'px'
 
     // for navigation animations
 
@@ -124,12 +130,6 @@ document.addEventListener('scroll', () => {
         item5.style.width = '0vw'
     }
 })
-
-// open contact form
-
-const openContactForm = () => {
-    contactForm.style.display = 'block'
-}
 
 // songs
 

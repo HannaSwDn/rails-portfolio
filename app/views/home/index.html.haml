@@ -17,8 +17,8 @@
     %p about me
   #item3.listItem
     %p works
-  #item4.listItem.contact{onclick: 'openContactForm()'}
-    %p contact
+  #item4.listItem.contact
+    = link_to 'contact', new_message_path
   #item5.listItem
     %hr/
     %p music
@@ -32,28 +32,3 @@
       %hr/
       %p#song song will come up here yes
 
-  / contact form
-
-  #contactForm
-    %h2 Say Hello!
-
-    = form_with model: @message do |form|
-
-      %p
-        = form.label :name
-        = form.text_field :name
-
-      %p
-        = form.label :email
-        = form.text_field :email
-
-      %p
-        = form.label :title
-        = form.text_field :title
-
-      %p
-        = form.label :content
-        = form.text_area :content
-
-      %p
-        = form.submit 'Send message'
