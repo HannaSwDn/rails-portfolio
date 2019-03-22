@@ -14,3 +14,9 @@ Feature: Visitor can send message to admin
         And I send away the message
         Then I should see 'Thank you for your message!'
         And I should see 'I will get back to you as soon as possible.'
+
+    Scenario: Visitor can not send a message
+        Given I visit the site
+        And I click on link 'contact'
+        And I send away the message
+        Then I should see 'Please make sure that you have filled in all fields.'

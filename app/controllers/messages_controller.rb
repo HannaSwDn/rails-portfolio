@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
         if @message.save
             redirect_to messages_path
         else
-            redirect_to new_message_path, notice: "Sorry, your message could not be sent."
+            redirect_to new_message_path, notice: "Please make sure that you have filled in all fields."
         end
     end
 
