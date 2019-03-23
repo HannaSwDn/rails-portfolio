@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, worksModal
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, worksModal, contactFormX
 
 document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -30,6 +30,7 @@ document.addEventListener('turbolinks:load', () => {
     musicModalX = document.querySelector('#musicModalX')
     song = document.querySelector('#song')
     worksModal = document.querySelector('#worksModal')
+    contactFormX = document.querySelector('#closeContactForm')
 
     musicModal.style.display = 'none'
 
@@ -135,6 +136,12 @@ document.addEventListener('scroll', () => {
 
 const openWorksModal = () => {
     worksModal.style.display = 'block'
+}
+
+// close contact form
+
+const closeContactForm = () => {
+    window.location.href = 'https://cryptic-shore-60293.herokuapp.com/'
 }
 
 // songs
