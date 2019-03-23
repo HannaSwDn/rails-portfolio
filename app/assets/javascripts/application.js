@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, worksModal, contactFormX
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, worksModal, contactFormX, list
 
 document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -31,6 +31,7 @@ document.addEventListener('turbolinks:load', () => {
     song = document.querySelector('#song')
     worksModal = document.querySelector('#worksModal')
     contactFormX = document.querySelector('#closeContactForm')
+    list = document.querySelector('.list')
 
     musicModal.style.display = 'none'
 
@@ -75,6 +76,14 @@ const hideMusicModal = () => {
     setTimeout(function() {
         musicModal.style.display = 'none'
     }, 20)
+}
+
+// scroll to navigation
+
+const goToNavigation = () => {
+    list.scrollIntoView({
+        behavior: 'smooth'
+    });
 }
 
 // animation for scrolling line

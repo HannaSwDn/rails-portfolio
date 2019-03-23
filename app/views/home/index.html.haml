@@ -1,4 +1,10 @@
 .home
+
+  .menuIcon{onclick: 'goToNavigation()'}
+    .menuIconLine
+    .menuIconLine.menuIconLine2
+    .menuIconLine.menuIconLine3
+
   .homeBox
     - if admin_signed_in?
       = link_to 'Sign out', destroy_admin_session_path, method: :delete
