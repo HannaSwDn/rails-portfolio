@@ -147,6 +147,12 @@ const openWorksModal = () => {
     worksModal.style.display = 'block'
 }
 
+// close works modal
+
+const closeWorksModal = () => {
+    worksModal.style.display = 'none'
+}
+
 // close contact form
 
 const closeContactForm = () => {
@@ -160,5 +166,6 @@ let songs = [
     'ElDark - Художник',
     'idontwannabeyouanymore - Billie Eilish',
     "if i had a gun - noel gallagher's high flying birds",
-    '24k magic - Bruno Mars'
+    '24k magic - Bruno Mars',
+    "Skinin' in - Cody Simpson"
 ]

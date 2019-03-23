@@ -43,13 +43,26 @@
   / works modal
 
   #worksModal
+    %p#worksModalX{onclick: 'closeWorksModal()'} X
+
     .work
-      = image_tag('valencia.png', class: 'workImg')
+      = image_tag('valencia.png', class: 'workImage')
+
       .workInfo
-        %p Valencia
-        %p Features:
-        %ul
-          %li - You can log in as an Admin
-          %li - You can add items to the menu
-          %li - You can edit items on the menu
-          %li - You can delete items on the menu
+        %div
+          .workTitle
+            %h3 - Valencia -
+          .workInformation
+            %p.workDescription
+              %span.blue> This is a restaurant website that has a luxury / fancy feel to it.
+            %p.blue.features This website includes:
+            %p.feature - The owner of the restaurant can log in as an Admin
+            %p.feature - You can add items to the menu
+            %p.feature - You can edit items on the menu
+            %p.feature - You can delete items on the menu
+            %p.feature - Responsive design, which means it looks good on all screen sizes
+            %p.feature - Animation when you open and close the navigation
+
+      .workLink
+        %hr
+        %a{href: 'https://polar-sea-30671.herokuapp.com/', target: '_blank'} visit site

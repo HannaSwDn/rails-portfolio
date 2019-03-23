@@ -183,7 +183,7 @@
 
 
 #worksModal
-    background-color: white
+    background: white
     color: black
     display: none
     height: 100vh
@@ -194,14 +194,78 @@
 
 .work
     height: 100vh
+    position: relative
     width: 100vw
 
-.workImg
-    float: right
-    width: 60%
+.workImage
+    box-shadow: 2px 2px 5px lightgray
+    position: absolute
+    right: 2rem
+    top: 2rem
+    width: 55vw
+
+.workTitle h3
+    font-size: 25px
+    font-weight: 400
+    letter-spacing: 8px
+    line-height: 4rem
+    padding-left: 1rem
+    text-transform: uppercase
 
 .workInfo
+    height: 100vh
+    padding: 1rem
+    width: 40vw
+    margin-top: 15vh
+
+.workDescription
+    font-size: 18px
+    letter-spacing: 2px
+    margin-bottom: 2rem
     padding: 2rem
+
+.blue
+    background-color: #CAE1FF
+
+.workInformation
+    font-size: 20px
+
+.feature
+    font-size: 15px
+    line-height: 2rem
+    padding-left: 1rem
+
+.features
+    font-size: 20px
+    padding: 5px
+    text-transform: uppercase
+
+.workLink
+    bottom: 5rem
+    position: absolute
+    right: 1rem
+    width: 60vw
+
+.workLink hr
+    background-color: black
+    border: none
+    height: 2px
+    width: calc(50vw - 20rem)
+
+.workLink a
+    color: black
+    letter-spacing: 10px
+    margin-left: 2rem
+    text-decoration: none
+    text-transform: uppercase
+
+#worksModalX
+    cursor: pointer
+    font-size: 30px
+    left: 1.5rem
+    position: absolute
+    top: 1rem
+    z-index: 30
 
 
 
