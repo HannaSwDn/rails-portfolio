@@ -147,12 +147,20 @@ document.addEventListener('scroll', () => {
 
 const openWorksModal = () => {
     worksModal.style.display = 'block'
+
+    setTimeout(function() {
+        worksModal.style.height = '100vh'
+    }, 20)
 }
 
 // close works modal
 
 const closeWorksModal = () => {
-    worksModal.style.display = 'none'
+    worksModal.style.height = '0vh'
+
+    setTimeout(function() {
+        worksModal.style.display = 'none'
+    }, 520)
 }
 
 // close contact form
