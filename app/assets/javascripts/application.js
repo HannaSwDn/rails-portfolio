@@ -197,5 +197,7 @@ let songs = [
     'idontwannabeyouanymore - Billie Eilish',
     "if i had a gun - noel gallagher's high flying birds",
     '24k magic - Bruno Mars',
-    "Sinkin' in - Cody Simpson"
+    "Sinkin' in - Cody Simpson",
+    'Talking to the moon - Bruno Mars',
+    'cry baby - the neighbourhood'
 ]
