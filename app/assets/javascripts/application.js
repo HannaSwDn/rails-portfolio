@@ -54,7 +54,7 @@ document.addEventListener('turbolinks:load', () => {
     // go to top of home page
 
     item1.addEventListener('click', () => {
-        window.scrollTo(0, 0)
+        window.scrollTo({top: 0, behavior: 'smooth'})
     })
 
     // open music modal
@@ -77,14 +77,12 @@ const openAboutMeModal = () => {
     aboutModal.style.display = 'block'
 
     setTimeout(function() {
-        // aboutModal.style.opacity = '1'
         aboutModal.style.height = '100vh'
     }, 20)
 }
 
 const closeAboutMeModal = () => {
     aboutModal.style.height = '0vh'
-    // aboutModal.style.opacity = '0'
 
     setTimeout(function() {
         aboutModal.style.display = 'none'
