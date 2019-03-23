@@ -260,9 +260,12 @@
     text-transform: uppercase
 
 #worksModalX
+    background-color: white
+    border-radius: 50%
     cursor: pointer
     font-size: 30px
     left: 1.5rem
+    padding: 15px
     position: absolute
     top: 1rem
     z-index: 30
@@ -275,6 +278,41 @@
 
 
 
+
+
+@media only screen and (max-width: 1000px)
+    .workImage
+        position: static
+        width: 100vw
+
+    .workTitle
+        display: none
+        
+    .workInfo
+        height: auto
+        margin-top: 0
+        width: 100vw
+
+    .workDescription
+        font-size: 25px
+
+    .workLink
+        position: static
+
+    .features
+        background-color: transparent
+    
+    .feature
+        background-color: #CAE1FF
+
+    .workLink
+        height: 4rem
+        width: 100vw
+
+    .workLink hr
+        width: calc(100vw - 20rem)
+
+    
 
 
 @media only screen and (max-width: 600px)
