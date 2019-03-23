@@ -1,5 +1,6 @@
 .home
     height: 100vh
+    overflow-x: hidden
     width: 100vw
 
 .homeBox:first-child
@@ -195,5 +196,27 @@
 
 @media only screen and (max-width: 500px)
     .homeBox
-        height: 50vh
+        height: 6rem
         width: 100vw
+
+    .homeBox:last-child
+        height: calc(100vh - 6rem)
+        width: 100vw
+
+    .adminLink
+        font-size: 50px
+        left: 1rem
+        letter-spacing: 3px
+        top: 4rem
+
+    .scroll
+        height: 4rem
+        letter-spacing: 10px
+        width: 100vw
+
+    #scrollLineOne
+        width: calc(100vw -1rem)
+
+    .listItem
+        font-size: 20px
+        margin-right: 1rem
