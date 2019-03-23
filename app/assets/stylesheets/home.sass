@@ -26,11 +26,12 @@
     padding-left: 2rem
 
 .adminLink
-    color: #CAE1FF
+    background-color: white
+    color: black
     font-size: 75px
     font-weight: 800
     left: 2rem
-    letter-spacing: 5px
+    letter-spacing: 10px
     position: absolute
     text-decoration: none
     text-transform: uppercase
@@ -355,8 +356,10 @@
     .workLink hr
         width: calc(100vw - 20rem)
 
-    
-
+@media only screen and (max-width: 740px)
+    .adminLink
+        font-size: 65px
+        letter-spacing: 5px
 
 @media only screen and (max-width: 600px)
     .homeBox
