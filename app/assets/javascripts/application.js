@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, musicModalX, worksModal, contactFormX, list
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, worksModal, contactFormX, list
 
 document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -27,7 +27,6 @@ document.addEventListener('turbolinks:load', () => {
     item4 = document.querySelector('#item4')
     item5 = document.querySelector('#item5')
     musicModal = document.querySelector('#musicModal')
-    musicModalX = document.querySelector('#musicModalX')
     song = document.querySelector('#song')
     worksModal = document.querySelector('#worksModal')
     contactFormX = document.querySelector('#closeContactForm')
@@ -61,21 +60,24 @@ document.addEventListener('turbolinks:load', () => {
 
     item5.addEventListener('click', () => {
         musicModal.style.display = 'flex'
+
+        setTimeout(function() {
+            musicModal.style.height = '100vh'
+        }, 10)
+
         musicModal.style.top = window.pageYOffset + 'px'
         song.innerHTML = songs[Math.floor(Math.random() * songs.length)]
-    })
-
-    musicModalX.addEventListener('click', () => {
-        musicModal.style.display = 'none'
     })
 })
 
 // hide music modal
 
 const hideMusicModal = () => {
+    musicModal.style.height = '0vh'
+
     setTimeout(function() {
         musicModal.style.display = 'none'
-    }, 20)
+    }, 520)
 }
 
 // scroll to navigation
@@ -167,5 +169,5 @@ let songs = [
     'idontwannabeyouanymore - Billie Eilish',
     "if i had a gun - noel gallagher's high flying birds",
     '24k magic - Bruno Mars',
-    "Skinin' in - Cody Simpson"
+    "Sinkin' in - Cody Simpson"
 ]
