@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, worksModal, contactFormX, list
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, worksModal, contactFormX, list, aboutModal
 
 document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -31,6 +31,7 @@ document.addEventListener('turbolinks:load', () => {
     worksModal = document.querySelector('#worksModal')
     contactFormX = document.querySelector('#closeContactForm')
     list = document.querySelector('.list')
+    aboutModal = document.querySelector('#aboutMeModal')
 
     musicModal.style.display = 'none'
 
@@ -69,6 +70,26 @@ document.addEventListener('turbolinks:load', () => {
         song.innerHTML = songs[Math.floor(Math.random() * songs.length)]
     })
 })
+
+// open about me modal
+
+const openAboutMeModal = () => {
+    aboutModal.style.display = 'block'
+
+    setTimeout(function() {
+        // aboutModal.style.opacity = '1'
+        aboutModal.style.height = '100vh'
+    }, 20)
+}
+
+const closeAboutMeModal = () => {
+    aboutModal.style.height = '0vh'
+    // aboutModal.style.opacity = '0'
+
+    setTimeout(function() {
+        aboutModal.style.display = 'none'
+    }, 520)
+}
 
 // hide music modal
 
@@ -109,6 +130,7 @@ document.addEventListener('scroll', () => {
 
     musicModal.style.top = offset + 'px'
     worksModal.style.top = offset + 'px'
+    aboutModal.style.top = offset + 'px'
 
     // for navigation animations
 

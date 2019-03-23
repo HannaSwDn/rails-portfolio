@@ -21,10 +21,10 @@
 .list
   #item1.listItem
     %p home
-  #item2.listItem
+  #item2.listItem{onclick: 'openAboutMeModal()'}
     %p about me
-  #item3.listItem
-    %p{onclick: 'openWorksModal()'} works
+  #item3.listItem{onclick: 'openWorksModal()'}
+    %p works
   #item4.listItem
     = link_to 'contact', new_message_path, id: 'contactLink'
   #item5.listItem
@@ -39,6 +39,18 @@
       %p music tip:
       %hr/
       %p#song song will come up here
+
+  / about me modal
+
+  #aboutMeModal
+    %p#aboutX{onclick: 'closeAboutMeModal()'} X
+
+    .aboutMeText
+      %h3 Nice to see you here!
+      %p My name is Hanna.
+      %p I am a fullstack web developer made in Stockholm, Sweden.
+      %p I recently graduated from a programming bootcamp called Craft Academy here in Stockholm where we learned both front and backend development.
+      
 
   / works modal
 
@@ -66,3 +78,6 @@
       .workLink
         %hr
         %a{href: 'https://polar-sea-30671.herokuapp.com/', target: '_blank'} visit site
+
+
+
