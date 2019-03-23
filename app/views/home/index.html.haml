@@ -12,6 +12,8 @@
     - else
       = link_to 'welcome.', new_admin_session_path, class: 'adminLink'
 
+    %p.welcomeP have a look around.
+
   .homeBox
     .scroll
       #scrollLineOne
@@ -24,9 +26,9 @@
   #item2.listItem{onclick: 'openAboutMeModal()'}
     %p about me
   #item3.listItem{onclick: 'openWorksModal()'}
-    %p works
-  #item4.listItem
-    = link_to 'contact', new_message_path, id: 'contactLink'
+    %p my works
+  #item4.listItem{onclick: 'window.location.href = "https://cryptic-shore-60293.herokuapp.com/messages/new"'}
+    %p contact
   #item5.listItem
     %hr/
     %p music
