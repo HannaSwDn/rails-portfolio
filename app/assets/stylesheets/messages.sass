@@ -33,6 +33,8 @@
 
 #contactForm .send
     background-color: #CAE1FF
+    border: none
+    border-radius: none
     color: white
     cursor: pointer
     font-size: 30px
@@ -76,3 +78,30 @@
     color: black
     line-height: 5rem
     text-decoration: none
+
+
+
+
+
+// responsive
+
+
+
+
+@media only screen and (max-width: 500px)
+    #contactForm
+        padding-left: 2rem
+
+    #contactForm h2
+        font-size: 20px
+        text-align: center
+
+    .contactLabel
+        font-size: 15px
+
+    .contactField
+        font-size: 15px
+        width: calc(100vw - 4rem)
+
+    #contactForm .send
+        font-size: 20px
