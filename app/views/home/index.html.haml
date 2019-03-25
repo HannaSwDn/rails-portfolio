@@ -1,7 +1,7 @@
 .home
 
   .menuIcon{onclick: 'goToNavigation()'}
-    .menuIconLine
+    .menuIconLine.menuIconLine1
     .menuIconLine.menuIconLine2
     .menuIconLine.menuIconLine3
 
@@ -10,10 +10,19 @@
       = link_to 'Sign out', destroy_admin_session_path, method: :delete
       = link_to 'Messages', admin_index_path
     - else
-      = link_to 'welcome.', new_admin_session_path, class: 'adminLink'
+      %h2.adminLink welcome.
 
     %p.welcomeP
-      have a look around
+      You have reached a
+      %br
+      %span
+        fullstack web developer
+      %br
+      located in
+      %span.sweden
+        Stockholm, Sweden.
+      %br
+      have a look around.
       %br / Hanna
 
   .homeBox
@@ -50,15 +59,24 @@
     %p#aboutX{onclick: 'closeAboutMeModal()'} X
 
     .aboutMeText
-      %h3 Nice to see you here!
+      %p Nice to see you here!
       %p My name is Hanna.
       %p I am a fullstack web developer made in Stockholm, Sweden.
-      %p
-        I recently graduated from a programming bootcamp called Craft Academy here in Stockholm where I gained a lot of experience in
-        %span web development, design and communication.
+      %p When I am not programming you will find me sitting with a guitar or in front of my computer screen again, this time watching debates on youtube.
+      %p 
 
-      %h3 special thanks
+      / this will be an animation
+      %p some of my opinions:
+      %p coffee > tea
+      %p ikea > any store
+      %p snowboarding > skiing
+      %p summer > winter
+      %p poker > chess
+
+      %p special thanks
       %p coaches at craft academy
+
+      %p "compare yourself to who you were yesterday, not to who someone else is today" - Jordan B Peterson
       
 
   / works modal

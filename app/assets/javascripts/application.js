@@ -49,7 +49,7 @@ document.addEventListener('turbolinks:load', () => {
 
     setInterval(function() {
         scrollingAnimation(scrollLine)
-    }, 5000)
+    }, 4000)
 
     // go to top of home page
 
