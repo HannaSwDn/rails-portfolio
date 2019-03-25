@@ -16,7 +16,7 @@
 //= require_tree .
 
 // global variables
-let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, worksModal, contactFormX, list, aboutModal
+let scrollLine, nameAnimation, item1, item2, item3, item4, item5, musicModal, song, worksModal, contactFormX, list, aboutModal, aboutScroll, aboutLine2
 
 document.addEventListener('turbolinks:load', () => {
     scrollLine = document.querySelector('#scrollLineTwo')
@@ -32,6 +32,8 @@ document.addEventListener('turbolinks:load', () => {
     contactFormX = document.querySelector('#closeContactForm')
     list = document.querySelector('.list')
     aboutModal = document.querySelector('#aboutMeModal')
+    aboutScroll = document.querySelector('.aboutScroll')
+    aboutLine2 = document.querySelector('.aboutLine2')
 
     musicModal.style.display = 'none'
 
@@ -49,6 +51,10 @@ document.addEventListener('turbolinks:load', () => {
 
     setInterval(function() {
         scrollingAnimation(scrollLine)
+    }, 4000)
+
+    setInterval(function() {
+        scrollingAnimation2(aboutLine2)
     }, 4000)
 
     // go to top of home page
@@ -78,6 +84,8 @@ const openAboutMeModal = () => {
 
     setTimeout(function() {
         aboutModal.style.height = '100vh'
+        aboutScroll.style.bottom = '0'
+        aboutScroll.style.position = 'fixed'
     }, 20)
 }
 
@@ -120,6 +128,20 @@ const scrollingAnimation = () => {
         scrollLine.style.left = 'auto'
         scrollLine.style.right = '0'
         scrollLine.style.width = '0%'
+    }, 1010)
+}
+
+const scrollingAnimation2 = () => {
+    setTimeout(function() {
+        aboutLine2.style.left = '0'
+        aboutLine2.style.right = 'auto'
+        aboutLine2.style.width = '100%'
+    }, 10)
+
+    setTimeout(function() {
+        aboutLine2.style.left = 'auto'
+        aboutLine2.style.right = '0'
+        aboutLine2.style.width = '0%'
     }, 1010)
 }
 

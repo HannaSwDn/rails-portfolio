@@ -53,31 +53,43 @@
       %hr/
       %p#song song will come up here
 
-  / about me modal
-
   #aboutMeModal
+    .aboutScroll
+      .aboutLine1
+        .aboutLine2
+      %p scroll
+      
     %p#aboutX{onclick: 'closeAboutMeModal()'} X
 
-    .aboutMeText
-      %p Nice to see you here!
-      %p My name is Hanna.
-      %p I am a fullstack web developer made in Stockholm, Sweden.
-      %p When I am not programming you will find me sitting with a guitar or in front of my computer screen again, this time watching debates on youtube.
-      %p 
+    .aboutBox
+      %div
+        %h3 Nice to see you here!
+        %p
+          My name is Hanna, a fullstack web developer made in
+          %span.stockholm Stockholm, Sweden.
+        %p I am a graduate from the programming bootcamp Craft Academy.
+        %p
+          When I am not programming you will find me sitting with a guitar or in front of my computer screen again,
+          %br this time watching debates on youtube.
+    
+    .aboutBox
+      %div
+        / this will be an animation
+        %p some of my opinions:
+        %p coffee > tea
+        %p ikea > any store
+        %p snowboarding > skiing
+        %p summer > winter
+        %p poker > chess
 
-      / this will be an animation
-      %p some of my opinions:
-      %p coffee > tea
-      %p ikea > any store
-      %p snowboarding > skiing
-      %p summer > winter
-      %p poker > chess
+        %p You can contact / stalk me here:
+        %p Instagram
+        %p GitHub
 
-      %p special thanks
-      %p coaches at craft academy
+        %p special thanks
+        %p coaches at craft academy
 
-      %p "compare yourself to who you were yesterday, not to who someone else is today" - Jordan B Peterson
-      
+        %p "compare yourself to who you were yesterday, not to who someone else is today" - Jordan B Peterson
 
   / works modal
 
